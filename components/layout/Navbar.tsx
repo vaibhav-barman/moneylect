@@ -1,24 +1,7 @@
 import Link from "next/link";
-import Container from "@/components/ui/Container";
 
-const navLinks = [
-  {
-    name: "Learn",
-    href: "/learn",
-  },
-  {
-    name: "Roadmap",
-    href: "/roadmap",
-  },
-  {
-    name: "Tools",
-    href: "/tools",
-  },
-  {
-    name: "About",
-    href: "/about",
-  },
-];
+import Container from "@/components/ui/Container";
+import { navigation } from "@/data/navigation/navigation";
 
 export default function Navbar() {
   return (
@@ -39,13 +22,13 @@ export default function Navbar() {
 
           <ul className="hidden items-center gap-8 md:flex">
 
-            {navLinks.map((link) => (
-              <li key={link.name}>
+            {navigation.map((link) => (
+              <li key={link.title}>
                 <Link
                   href={link.href}
                   className="font-medium text-gray-600 transition hover:text-emerald-600"
                 >
-                  {link.name}
+                  {link.title}
                 </Link>
               </li>
             ))}
@@ -56,7 +39,7 @@ export default function Navbar() {
 
           <Link
             href="/learn"
-            className="rounded-full bg-emerald-600 px-5 py-3 font-semibold text-white transition hover:bg-emerald-700"
+            className="rounded-full bg-gradient-to-r from-emerald-500 to-emerald-600 px-5 py-3 font-semibold text-white shadow-lg transition hover:shadow-emerald-300"
           >
             Start Learning →
           </Link>

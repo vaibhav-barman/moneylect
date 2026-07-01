@@ -3,6 +3,7 @@ import Badge from "@/components/ui/Badge";
 import Stats from "@/components/home/Stats";
 import HeroIllustration from "@/components/hero/HeroIllustration";
 import HeroSocialProof from "@/components/home/HeroSocialProof";
+import { siteConfig } from "@/data/site/site";
 
 export default function Hero() {
   return (
@@ -40,10 +41,7 @@ export default function Hero() {
             </h1>
 
             <p className="mt-8 max-w-xl text-xl leading-9 text-gray-600">
-              Step-by-step guides on saving, investing,
-              budgeting, taxes, credit cards and more.
-              Everything you need to build wealth and
-              financial freedom.
+              {siteConfig.tagline}
             </p>
 
             <div className="mt-12 flex flex-wrap gap-5">

@@ -1,43 +1,55 @@
 export const roadmap = [
   {
-    step: "01",
-    title: "Money Basics",
-    description:
-      "Understand how money works before earning your first salary.",
-  },
-
-  {
-    step: "02",
+    id: 1,
     title: "Saving",
+    lessons: 8,
+    color: "emerald",
     description:
-      "Create an emergency fund and build good saving habits.",
+      "Emergency fund, bank accounts, FD, RD and smart saving habits.",
   },
 
   {
-    step: "03",
+    id: 2,
     title: "Budgeting",
+    lessons: 10,
+    color: "blue",
     description:
-      "Track income and expenses with a simple monthly budget.",
+      "Learn to control your money before it controls you.",
   },
 
   {
-    step: "04",
+    id: 3,
     title: "Investing",
+    lessons: 15,
+    color: "purple",
     description:
-      "Learn SIPs, mutual funds and long-term wealth creation.",
+      "SIP, Mutual Funds, Stocks, Gold and Wealth Creation.",
   },
 
   {
-    step: "05",
-    title: "Insurance",
+    id: 4,
+    title: "Credit Cards",
+    lessons: 6,
+    color: "orange",
     description:
-      "Protect yourself from financial risks with the right insurance.",
+      "Credit score, rewards and avoiding debt.",
   },
 
   {
-    step: "06",
+    id: 5,
     title: "Taxes",
+    lessons: 9,
+    color: "red",
     description:
-      "Understand income tax, deductions and filing basics.",
+      "Income Tax explained in simple English.",
+  },
+
+  {
+    id: 6,
+    title: "Insurance",
+    lessons: 7,
+    color: "cyan",
+    description:
+      "Health insurance, life insurance and term plans.",
   },
 ];
