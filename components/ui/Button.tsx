@@ -16,9 +16,9 @@ export default function Button({
 
   const variants = {
     primary:
-      "bg-emerald-600 text-white hover:bg-emerald-700",
+      "bg-gradient-to-r from-emerald-500 to-emerald-600 text-white hover:bg-emerald-700 shadow-lg hover:shadow-emerald-300",
     secondary:
-      "border border-gray-300 bg-white text-gray-900 hover:bg-gray-100",
+      "border border-gray-300 bg-white text-gray-900 hover:border-emerald-300 hover:bg-emerald-50",
   };
 
   return (

@@ -1,6 +1,7 @@
 import Navbar from "@/components/layout/Navbar";
 import { articles } from "@/data/articles/articles";
 import { notFound } from "next/navigation";
+import Footer from "@/components/layout/Footer";
 
 type Props = {
   params: Promise<{
@@ -51,6 +52,7 @@ export default async function ArticlePage({ params }: Props) {
             ))}
         </div>
       </main>
+      <Footer />
     </>
   );
 }

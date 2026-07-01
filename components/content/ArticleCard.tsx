@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-type ArticleCardProps = {
+type Props = {
   slug: string;
   title: string;
   description: string;
@@ -14,31 +14,31 @@ export default function ArticleCard({
   description,
   category,
   readTime,
-}: ArticleCardProps) {
+}: Props) {
   return (
     <Link
       href={`/articles/${slug}`}
-      className="group block rounded-3xl border border-gray-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+      className="group block overflow-hidden rounded-[28px] border border-gray-200 bg-white p-8 shadow-lg transition-all duration-300 hover:-translate-y-3 hover:border-emerald-500 hover:shadow-2xl"
     >
-      <p className="text-sm font-semibold uppercase tracking-wider text-emerald-600">
+      <p className="text-sm font-bold uppercase tracking-wider text-emerald-600">
         {category}
       </p>
 
-      <h2 className="mt-4 text-3xl font-bold text-gray-900 group-hover:text-emerald-600">
+      <h2 className="mt-4 text-[30px] leading-tight font-bold text-gray-900 group-hover:text-emerald-600">
         {title}
       </h2>
 
-      <p className="mt-5 leading-8 text-gray-600">
+      <p className="mt-6 leading-8 text-gray-600">
         {description}
       </p>
 
-      <div className="mt-8 flex items-center justify-between">
-        <span className="text-sm text-gray-500">
+      <div className="mt-10 flex items-center justify-between">
+        <span className="text-gray-500">
           {readTime}
         </span>
 
         <span className="font-semibold text-emerald-600">
-          Read →
+          Read Article →
         </span>
       </div>
     </Link>

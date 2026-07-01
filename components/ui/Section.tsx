@@ -8,7 +8,7 @@ export default function Section({
   className = "",
 }: SectionProps) {
   return (
-    <section className={`py-24 ${className}`}>
+    <section className={`py-20 ${className}`}>
       {children}
     </section>
   );

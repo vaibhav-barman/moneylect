@@ -2,6 +2,7 @@ import Navbar from "@/components/layout/Navbar";
 import Heading from "@/components/ui/Heading";
 import Section from "@/components/ui/Section";
 import ArticleCard from "@/components/content/ArticleCard";
+import Footer from "@/components/layout/Footer";
 
 import { articles } from "@/data/articles/articles";
 
@@ -35,6 +36,9 @@ export default function ArticlesPage() {
 
         </div>
       </Section>
+
+      <Footer />
+
     </>
   );
 }
