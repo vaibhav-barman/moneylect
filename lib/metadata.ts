@@ -1,9 +1,11 @@
-import { siteConfig } from "@/data/site/site";
+import { Metadata } from "next";
 
-export function createMetadata(title: string) {
+export function articleMetadata(
+  title: string,
+  description: string
+): Metadata {
   return {
-    title: `${title} | ${siteConfig.name}`,
-
-    description: siteConfig.description,
+    title,
+    description,
   };
 }

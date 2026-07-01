@@ -1,20 +1,17 @@
-export default function AuthorCard() {
+type Props = {
+  author: string;
+};
+
+export default function AuthorCard({ author }: Props) {
   return (
-    <div className="mt-24 rounded-3xl border border-gray-200 bg-gray-50 p-10">
-
-      <p className="text-sm font-semibold uppercase tracking-wider text-emerald-600">
+    <div className="mt-16 rounded-3xl border border-gray-200 bg-gray-50 p-8">
+      <h3 className="font-bold text-gray-900">
         Written by
-      </p>
-
-      <h3 className="mt-2 text-2xl font-bold">
-        Moneylect Team
       </h3>
 
-      <p className="mt-4 leading-8 text-gray-600">
-        We simplify personal finance for Indian students,
-        freshers and young professionals.
+      <p className="mt-3 text-gray-600">
+        {author}
       </p>
-
     </div>
   );
 }

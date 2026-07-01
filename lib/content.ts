@@ -2,19 +2,43 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const CONTENT_PATH = path.join(process.cwd(), "content/articles");
+const contentDirectory = path.join(process.cwd(), "content/articles");
 
-export function getArticleSlugs() {
-  return fs.readdirSync(CONTENT_PATH);
+export type ArticleMeta = {
+  title: string;
+  description: string;
+  category: string;
+  slug: string;
+  publishedAt: string;
+  author: string;
+};
+
+function walk(dir: string): string[] {
+  let files: string[] = [];
+
+  for (const file of fs.readdirSync(dir)) {
+    const fullPath = path.join(dir, file);
+
+    if (fs.statSync(fullPath).isDirectory()) {
+      files = files.concat(walk(fullPath));
+    } else {
+      files.push(fullPath);
+    }
+  }
+
+  return files;
 }
 
-export function getArticleBySlug(slug: string) {
-  const fullPath = path.join(
-    CONTENT_PATH,
-    `${slug}.mdx`
-  );
+export function getAllArticles() {
+  const files = walk(contentDirectory);
 
-  const file = fs.readFileSync(fullPath, "utf8");
+  return files
+    .filter((file) => file.endsWith(".mdx"))
+    .map((file) => {
+      const source = fs.readFileSync(file, "utf8");
 
-  return matter(file);
+      const { data } = matter(source);
+
+      return data as ArticleMeta;
+    });
 }

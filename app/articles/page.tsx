@@ -4,9 +4,12 @@ import Section from "@/components/ui/Section";
 import ArticleCard from "@/components/content/ArticleCard";
 import Footer from "@/components/layout/Footer";
 
-import { articles } from "@/data/articles/articles";
+import { getArticles } from "@/services/article.service";
 
 export default function ArticlesPage() {
+
+  const articles = getArticles();
+
   return (
     <>
       <Navbar />
