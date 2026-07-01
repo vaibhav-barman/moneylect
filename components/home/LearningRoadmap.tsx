@@ -1,72 +1,90 @@
+import Heading from "@/components/ui/Heading";
+import Section from "@/components/ui/Section";
+
 const roadmap = [
   {
     step: "01",
     title: "Money Basics",
-    description: "Understand how money works before earning your first salary.",
+    description:
+      "Understand how money works before earning your first salary.",
   },
   {
     step: "02",
     title: "Budgeting",
-    description: "Create a budget that helps you spend intentionally.",
+    description:
+      "Create a monthly budget and learn how to manage your expenses.",
   },
   {
     step: "03",
     title: "Saving",
-    description: "Build your emergency fund and develop saving habits.",
+    description:
+      "Build an emergency fund and develop strong saving habits.",
   },
   {
     step: "04",
     title: "Investing",
-    description: "Start investing through SIPs, mutual funds and index funds.",
+    description:
+      "Start investing with SIPs, mutual funds and index funds.",
   },
   {
     step: "05",
     title: "Insurance",
-    description: "Learn how to protect yourself financially.",
+    description:
+      "Protect yourself and your family from financial risks.",
   },
   {
     step: "06",
     title: "Financial Freedom",
-    description: "Build wealth and create long-term financial independence.",
+    description:
+      "Build long-term wealth and achieve financial independence.",
   },
 ];
 
 export default function LearningRoadmap() {
   return (
-    <section className="bg-white py-28">
+    <Section className="bg-white">
       <div className="mx-auto max-w-5xl px-6">
-        <h2 className="text-center text-5xl font-bold text-gray-900">
-          Your Financial Journey
-        </h2>
+        <Heading
+          title="Your Financial Journey"
+          subtitle="Learn personal finance in the correct order instead of randomly jumping between articles."
+        />
 
-        <p className="mx-auto mt-5 max-w-2xl text-center text-lg text-gray-600">
-          Learn personal finance in the right order instead of guessing what to
-          study next.
-        </p>
+        <div className="mt-20 relative">
 
-        <div className="mt-20 space-y-8">
-          {roadmap.map((item) => (
-            <div
-              key={item.step}
-              className="flex items-start gap-6 rounded-3xl border border-gray-200 p-8 transition hover:border-emerald-500 hover:shadow-lg"
-            >
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-xl font-bold text-white">
-                {item.step}
+          {/* Vertical Line */}
+
+          <div className="absolute left-7 top-0 h-full w-1 rounded-full bg-emerald-100" />
+
+          <div className="space-y-10">
+
+            {roadmap.map((item) => (
+              <div
+                key={item.step}
+                className="relative flex gap-8"
+              >
+                {/* Number */}
+
+                <div className="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-lg font-bold text-white shadow-lg">
+                  {item.step}
+                </div>
+
+                {/* Card */}
+
+                <div className="flex-1 rounded-3xl border border-gray-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+                  <h3 className="text-2xl font-bold text-gray-900">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-3 text-lg leading-8 text-gray-600">
+                    {item.description}
+                  </p>
+                </div>
               </div>
+            ))}
 
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900">
-                  {item.title}
-                </h3>
-
-                <p className="mt-2 leading-7 text-gray-600">
-                  {item.description}
-                </p>
-              </div>
-            </div>
-          ))}
+          </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
