@@ -11,6 +11,7 @@ export type ArticleMeta = {
   slug: string;
   publishedAt: string;
   author: string;
+  readTime: string;
 };
 
 function walk(dir: string): string[] {
