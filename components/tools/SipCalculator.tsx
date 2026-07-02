@@ -2,76 +2,78 @@
 
 import { useState } from "react";
 
+import { calculateSIP } from "@/lib/sip";
+
+import CalculatorForm from "./sip/CalculatorForm";
+import CalculatorResult from "./sip/CalculatorResult";
+import GrowthChart from "./sip/GrowthChart";
+import DoughnutChart from "./sip/DoughnutChart";
+import InvestmentTable from "./sip/InvestmentTable";
+import QuickAmounts from "./sip/QuickAmounts";
+
 export default function SipCalculator() {
   const [monthlyInvestment, setMonthlyInvestment] = useState(5000);
   const [years, setYears] = useState(20);
-  const [returnRate, setReturnRate] = useState(12);
+  const [rate, setRate] = useState(12);
+
+  const result = calculateSIP(
+    monthlyInvestment,
+    years,
+    rate
+  );
 
   return (
-    <div className="grid gap-10 lg:grid-cols-2">
+    <div className="space-y-10">
 
-      <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-lg">
+      <div className="grid gap-8 lg:grid-cols-[420px_1fr]">
 
-        <h2 className="text-3xl font-bold">
-          Investment Details
-        </h2>
+        {/* LEFT */}
 
-        <div className="mt-10 space-y-8">
+        <div>
 
-          <div>
-            <label className="font-semibold">
-              Monthly Investment
-            </label>
+          <CalculatorForm
+            monthlyInvestment={monthlyInvestment}
+            years={years}
+            rate={rate}
+            setMonthlyInvestment={setMonthlyInvestment}
+            setYears={setYears}
+            setRate={setRate}
+          />
 
-            <input
-              type="number"
-              value={monthlyInvestment}
-              onChange={(e) => setMonthlyInvestment(Number(e.target.value))}
-              className="mt-3 w-full rounded-xl border border-gray-300 p-4"
-            />
-          </div>
+          <QuickAmounts
+            onSelect={setMonthlyInvestment}
+          />
 
-          <div>
-            <label className="font-semibold">
-              Investment Period (Years)
-            </label>
+        </div>
 
-            <input
-              type="number"
-              value={years}
-              onChange={(e) => setYears(Number(e.target.value))}
-              className="mt-3 w-full rounded-xl border border-gray-300 p-4"
-            />
-          </div>
+        {/* RIGHT */}
 
-          <div>
-            <label className="font-semibold">
-              Expected Return (%)
-            </label>
+        <div className="space-y-6">
 
-            <input
-              type="number"
-              value={returnRate}
-              onChange={(e) => setReturnRate(Number(e.target.value))}
-              className="mt-3 w-full rounded-xl border border-gray-300 p-4"
-            />
-          </div>
+          <CalculatorResult
+            invested={result.invested}
+            returns={result.returns}
+            total={result.total}
+          />
+
+          <DoughnutChart
+            invested={result.invested}
+            returns={result.returns}
+          />
 
         </div>
 
       </div>
 
-      <div className="rounded-3xl bg-emerald-600 p-8 text-white">
+      <GrowthChart
+        monthlyInvestment={monthlyInvestment}
+        years={years}
+      />
 
-        <h2 className="text-3xl font-bold">
-          Estimated Value
-        </h2>
-
-        <p className="mt-8 text-lg">
-          Calculator logic coming next...
-        </p>
-
-      </div>
+      <InvestmentTable
+        monthlyInvestment={monthlyInvestment}
+        years={years}
+      />
 
     </div>
   );

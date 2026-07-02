@@ -1,19 +1,14 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-
 import SipCalculator from "@/components/tools/SipCalculator";
 import FAQ from "@/components/tools/sip/FAQ";
-import InfoCards from "@/components/tools/sip/InfoCards";
-
-import Formula from "@/components/tools/sip/Formula";
-import LearnMore from "@/components/tools/sip/LearnMore";
 
 export default function SipCalculatorPage() {
   return (
     <>
       <Navbar />
 
-      <main className="bg-gradient-to-b from-gray-50 to-white py-20">
+      <main className="bg-white py-24">
 
         <div className="mx-auto max-w-7xl px-6">
 
@@ -23,13 +18,13 @@ export default function SipCalculatorPage() {
               Moneylect Tool
             </span>
 
-            <h1 className="mt-8 text-5xl font-black tracking-tight text-gray-900 lg:text-6xl">
+            <h1 className="mt-8 text-6xl font-extrabold text-gray-900">
               SIP Calculator
             </h1>
 
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">
-              Estimate how much wealth you can build through monthly SIP
-              investments using the power of compounding.
+            <p className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-gray-600">
+              Estimate how much wealth you can build through monthly
+              SIP investments using the power of compounding.
             </p>
 
           </div>
@@ -40,13 +35,7 @@ export default function SipCalculatorPage() {
 
           </div>
 
-          <InfoCards />
-
           <FAQ />
-          
-          <Formula />
-
-          <LearnMore />
 
         </div>
 
