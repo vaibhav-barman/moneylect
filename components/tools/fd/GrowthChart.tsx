@@ -53,7 +53,14 @@ export default function GrowthChart({
 
             <XAxis dataKey="year" />
 
-            <Tooltip />
+            <Tooltip
+
+            formatter={(value)=>[
+            `₹${Number(value).toLocaleString("en-IN")}`,
+            "Maturity Value",
+            ]}
+
+            />
 
             <Line
               dataKey="wealth"

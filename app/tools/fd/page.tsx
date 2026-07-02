@@ -39,6 +39,22 @@ export default function FDPage() {
 
             <FdCalculator />
 
+            <div className="mt-24 rounded-[32px] bg-gradient-to-r from-emerald-600 to-emerald-700 p-12 text-white">
+
+            <h2 className="text-4xl font-black">
+
+            Why use our FD Calculator?
+
+            </h2>
+
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-emerald-100">
+
+            Estimate your maturity amount instantly, compare investment durations, understand compound interest and plan your savings more effectively.
+
+            </p>
+
+            </div>
+
           </div>
 
           <Formula />

@@ -46,6 +46,7 @@ export default function DoughnutChart({
               dataKey="value"
               innerRadius={70}
               outerRadius={110}
+              label
             >
 
               <Cell fill="#10b981" />

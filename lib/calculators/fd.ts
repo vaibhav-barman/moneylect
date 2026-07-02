@@ -1,12 +1,12 @@
 export function calculateFD(
   principal: number,
-  rate: number,
+  annualRate: number,
   years: number
 ) {
   const maturity =
     principal *
     Math.pow(
-      1 + rate / 100,
+      1 + annualRate / 100,
       years
     );
 

@@ -8,6 +8,8 @@ import CalculatorForm from "@/components/tools/fd/CalculatorForm";
 import CalculatorResult from "@/components/tools/fd/CalculatorResult";
 import DoughnutChart from "@/components/tools/fd/DoughnutChart";
 import GrowthChart from "@/components/tools/fd/GrowthChart";
+import InvestmentTable from "@/components/tools/fd/InvestmentTable";
+import QuickAmounts from "@/components/tools/fd/QuickAmounts";
 
 export default function FdCalculator() {
   const [principal, setPrincipal] = useState(100000);
@@ -34,6 +36,10 @@ export default function FdCalculator() {
           setRate={setRate}
         />
 
+        <QuickAmounts
+            onSelect={setPrincipal}
+        />
+
         <div className="space-y-6">
 
           <CalculatorResult
@@ -52,6 +58,12 @@ export default function FdCalculator() {
       </div>
 
       <GrowthChart
+        principal={principal}
+        years={years}
+        rate={rate}
+      />
+
+      <InvestmentTable
         principal={principal}
         years={years}
         rate={rate}

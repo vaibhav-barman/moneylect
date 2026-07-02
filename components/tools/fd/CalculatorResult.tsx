@@ -15,19 +15,19 @@ export default function CalculatorResult({
     <div className="grid gap-5 md:grid-cols-3">
 
       <ResultCard
-        title="Investment"
+        title="Principal"
         value={`₹${principal.toLocaleString("en-IN")}`}
         color="text-blue-600"
       />
 
       <ResultCard
-        title="Interest Earned"
+        title="Total Interest"
         value={`₹${interest.toLocaleString("en-IN")}`}
         color="text-emerald-600"
       />
 
       <ResultCard
-        title="Maturity Value"
+        title="Total Maturity"
         value={`₹${maturity.toLocaleString("en-IN")}`}
         color="text-purple-600"
       />
