@@ -52,4 +52,11 @@ export const tools = [
     icon: "💸",
     status: "Coming Soon",
   },
+  {
+    title:"PPF Calculator",
+    description:"Estimate your Public Provident Fund maturity amount.",
+    href:"/tools/ppf",
+    icon:"🏛️",
+    status:"Available",
+  },
 ];

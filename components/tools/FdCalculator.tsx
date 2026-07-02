@@ -27,18 +27,22 @@ export default function FdCalculator() {
 
       <div className="grid gap-8 lg:grid-cols-[420px_1fr]">
 
-        <CalculatorForm
-          principal={principal}
-          years={years}
-          rate={rate}
-          setPrincipal={setPrincipal}
-          setYears={setYears}
-          setRate={setRate}
-        />
+        <div>
 
-        <QuickAmounts
+          <CalculatorForm
+            principal={principal}
+            years={years}
+            rate={rate}
+            setPrincipal={setPrincipal}
+            setYears={setYears}
+            setRate={setRate}
+          />
+
+          <QuickAmounts
             onSelect={setPrincipal}
-        />
+          />
+
+        </div>
 
         <div className="space-y-6">
 

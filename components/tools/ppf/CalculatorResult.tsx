@@ -1,33 +1,33 @@
 import ResultCard from "../sip/ResultCard";
 
 type Props = {
-  principal: number;
-  interest: number;
+  invested: number;
+  returns: number;
   maturity: number;
 };
 
 export default function CalculatorResult({
-  principal,
-  interest,
+  invested,
+  returns,
   maturity,
 }: Props) {
   return (
-    <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
+    <div className="grid gap-5 md:grid-cols-3">
 
       <ResultCard
-        title="Principal"
-        value={`₹${principal.toLocaleString("en-IN")}`}
+        title="Total Investment"
+        value={`₹${invested.toLocaleString("en-IN")}`}
         color="text-blue-600"
       />
 
       <ResultCard
-        title="Total Interest"
-        value={`₹${interest.toLocaleString("en-IN")}`}
+        title="Interest Earned"
+        value={`₹${returns.toLocaleString("en-IN")}`}
         color="text-emerald-600"
       />
 
       <ResultCard
-        title="Total Maturity"
+        title="Maturity Value"
         value={`₹${maturity.toLocaleString("en-IN")}`}
         color="text-purple-600"
       />

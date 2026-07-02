@@ -10,23 +10,23 @@ import {
 } from "recharts";
 
 type Props = {
-  principal: number;
-  interest: number;
+  invested: number;
+  returns: number;
 };
 
 export default function DoughnutChart({
-  principal,
-  interest,
+  invested,
+  returns,
 }: Props) {
 
   const data = [
     {
-      name: "Principal",
-      value: principal,
+      name: "Investment",
+      value: invested,
     },
     {
-      name: "Interest",
-      value: interest,
+      name: "Returns",
+      value: returns,
     },
   ];
 
@@ -34,7 +34,7 @@ export default function DoughnutChart({
     <div className="rounded-[28px] border border-gray-200 bg-white p-8 shadow-sm">
 
       <h2 className="text-2xl font-bold">
-        Payment Breakdown
+        Maturity Breakdown
       </h2>
 
       <div className="mt-8 h-80">

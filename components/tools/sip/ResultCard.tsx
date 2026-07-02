@@ -13,7 +13,6 @@ export default function ResultCard({
     <div
       className="
         relative
-        overflow-hidden
         rounded-[28px]
         border
         border-gray-200
@@ -32,7 +31,9 @@ export default function ResultCard({
         {title}
       </p>
 
-      <h2 className={`relative mt-3 text-3xl font-black ${color}`}>
+      <h2
+        className={`relative mt-3 break-words text-2xl font-black lg:text-3xl ${color}`}
+      >
         {value}
       </h2>
     </div>
