@@ -29,10 +29,10 @@ export const tools = [
   {
     title: "FD Calculator",
     description:
-      "Estimate your fixed deposit returns.",
+      "Calculate your Fixed Deposit maturity amount instantly.",
     href: "#",
     icon: "🏛️",
-    status: "Coming Soon",
+    status: "Available",
   },
 
   {

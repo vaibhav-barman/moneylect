@@ -23,4 +23,8 @@ export const calculators = [
     title: "SWP Calculator",
     href: "/tools/swp",
   },
+  {
+    title: "FD Calculator",
+    href: "/tools/fd",
+  }
 ];
