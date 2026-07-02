@@ -8,6 +8,13 @@ import InfoCards from "@/components/tools/sip/InfoCards";
 import Formula from "@/components/tools/sip/Formula";
 import LearnMore from "@/components/tools/sip/LearnMore";
 
+import Benefits from "@/components/tools/sip/Benefits";
+import Example from "@/components/tools/sip/Example";
+import Comparison from "@/components/tools/sip/Comparison";
+
+import RelatedCalculators from "@/components/tools/shared/RelatedCalculators";
+import RelatedArticles from "@/components/tools/shared/RelatedArticles";
+
 export default function SipCalculatorPage() {
   return (
     <>
@@ -46,7 +53,17 @@ export default function SipCalculatorPage() {
           
           <Formula />
 
+          <Benefits />
+
+          <Example />
+
+          <Comparison />
+
           <LearnMore />
+
+          <RelatedCalculators />
+
+          <RelatedArticles />
 
         </div>
 
