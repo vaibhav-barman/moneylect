@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import { calculateSIP } from "@/lib/sip";
+import { calculateSIP } from "@/lib/calculators/sip";
 
 import CalculatorForm from "./sip/CalculatorForm";
 import CalculatorResult from "./sip/CalculatorResult";

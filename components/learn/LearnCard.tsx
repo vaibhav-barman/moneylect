@@ -17,7 +17,7 @@ export default function LearnCard({
   return (
     <Link
       href={`/learn/${slugify(title)}`}
-      className="group block rounded-[30px] border border-gray-200 bg-white p-8 shadow-lg transition-all duration-300 hover:-translate-y-3 hover:border-emerald-500 hover:shadow-2xl"
+      className="group block rounded-[28px] border border-gray-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-emerald-500 hover:shadow-lg"
     >
       <div className="flex items-center justify-between">
 

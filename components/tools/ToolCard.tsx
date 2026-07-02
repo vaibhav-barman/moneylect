@@ -18,7 +18,7 @@ export default function ToolCard({
   const available = status === "Available";
 
   return (
-    <div className="rounded-[28px] border border-gray-200 bg-white p-8 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+    <div className="rounded-[28px] border border-gray-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
 
       <div className="flex items-start justify-between">
 
